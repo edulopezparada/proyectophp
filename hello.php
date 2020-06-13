@@ -1,3 +1,3 @@
 <?php
-echo 'Hello Nuevo PHP'
+echo 'Hello Nuevo PHP';
 ?>
