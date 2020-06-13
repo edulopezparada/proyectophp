@@ -1,6 +1,5 @@
 <?php
-$var = 1;
-$name = 'Edu López';
+$name = "Edu López";
 ?>
 <!doctype html>
 <html lang="en">
