@@ -1,5 +1,13 @@
 <?php
-$name = "Edu López";
+$name = 'Edu López';
+$lastname = 'Parada';
+$completename = "$name $lastname";
+var_dump($completename);
+$array = [
+  "curso 1"=>"php",
+  "curs0 2"=>"js",
+];
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -16,7 +24,6 @@ $name = "Edu López";
 
   <title>Resume</title>
 </head>
-
 <body>
   <div class="container">
     <div id="resume-header" class="row">
@@ -24,7 +31,7 @@ $name = "Edu López";
         <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
       </div>
       <div class="col">
-        <h1><?php echo $name; ?></h1>
+        <h1><?php echo $completename; ?></h1>
         <h2>WP Developer</h2>
         <ul>
           <li>Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c54595f48534e7c515d5550125f5351">[email&#160;protected]</a></li>
@@ -38,8 +45,9 @@ $name = "Edu López";
       <div class="col">
         <h2 class="border-bottom-gray" >Carrer Summary</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <?php 
+          
+          ?>
         </p>
       </div>
     </div>
