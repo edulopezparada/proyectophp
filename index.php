@@ -3,10 +3,31 @@ $name = 'Edu López';
 $lastname = 'Parada';
 $completename = "$name $lastname";
 var_dump($completename);
-$array = [
-  "curso 1"=>"php",
-  "curs0 2"=>"js",
+$jobs = [
+  [
+   'title' =>'SEO & Marketing Manager',
+   'description' => 'I was working in all the marketing strategy and the google rank to Silmaplast madrid'
+  ],
+  [  
+    'title' => 'C-Founder - Tradeando Futuros',
+    'description' => 'This was an online trading academy, that his core course was about trading psicology'
+  ],
+  [
+     'title' => 'Web Developer - Local Max',
+     'description' => 'Now I am working in Local Max, this company is specialize in Local Rank'
+  ]
 ];
+$languages = [
+  [
+      'Java','Pascal','R','HTML','PHP'
+    
+  ],
+  [
+      'Español - Nativo', 'Portugués - Bilingue', 'Inglés - Profesional'
+    
+  ]
+];
+
 
 ?>
 <!doctype html>
@@ -57,8 +78,8 @@ $array = [
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
             <li class="work-position">
-              <h5>PHP Developer</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
+              <h5><?php echo $jobs[0]['title']; ?></h5>
+              <p><?php echo $jobs[0]['description'];?></p>
               <strong>Achievements:</strong>
               <ul>
                 <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
@@ -67,8 +88,8 @@ $array = [
               </ul>
             </li>
             <li class="work-position">
-                <h5>PHP Developer</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
+                <h5><?php echo $jobs[1]['title']; ?></h5>
+                <p><?php echo $jobs[1]['description']; ?></p>
                 <strong>Achievements:</strong>
                 <ul>
                   <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
@@ -77,8 +98,8 @@ $array = [
                 </ul>
               </li>
               <li class="work-position">
-                  <h5>PHP Developer</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
+                  <h5><?php echo $jobs[2]['title']; ?></h5>
+                  <p><?php echo $jobs[2]['description']; ?></p>
                   <strong>Achievements:</strong>
                   <ul>
                     <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
@@ -124,20 +145,22 @@ $array = [
       </div>
       <div class="col-3">
         <h3 class="border-bottom-gray" >Skills & Tools</h3>
-        <h4>Backend</h4>
+        <h4><?php echo $languages[0][0]; ?></h4>
+        <h4><?php echo $languages[0][1]; ?></h4>
+        <h4><?php echo $languages[0][2]; ?></h4>
+
         <ul>
-          <li>PHP</li>
+          <li> <?php echo $languages[0][4]; ?></li>
         </ul>
         <h4>Frontend</h4>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li><?php echo $languages[0][3]; ?></li>
         </ul>
         <h3 class="border-bottom-gray" >Languages</h3>
         <ul>
-          <li>Spanish</li>
-          <li>Portuguese</li>
-          <li>English</li>
+          <li><?php echo $languages[1][0]; ?></li>
+          <li><?php echo $languages[1][1]; ?></li>
+          <li><?php echo $languages[1][2]; ?></li>
         </ul>
       </div>
     </div>
