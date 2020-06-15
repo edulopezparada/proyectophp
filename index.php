@@ -2,7 +2,6 @@
 $name = 'Edu López';
 $lastname = 'Parada';
 $completename = "$name $lastname";
-var_dump($completename);
 $jobs = [
   [
    'title' =>'SEO & Marketing Manager',
@@ -19,15 +18,18 @@ $jobs = [
 ];
 $languages = [
   [
-      'Java','Pascal','R','HTML','PHP'
-    
+      'Java','Pascal','R','HTML','PHP'  
   ],
   [
-      'Español - Nativo', 'Portugués - Bilingue', 'Inglés - Profesional'
-    
+      'Español - Nativo', 'Portugués - Bilingue', 'Inglés - Profesional'   
   ]
 ];
-
+$var1 = 1;
+if($var1 > 2){
+echo 'es mayor que 2';
+} else {
+ echo 'no es mayor que 2';
+}
 
 ?>
 <!doctype html>
@@ -77,36 +79,36 @@ $languages = [
         <div>
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
-            <li class="work-position">
-              <h5><?php echo $jobs[0]['title']; ?></h5>
-              <p><?php echo $jobs[0]['description'];?></p>
-              <strong>Achievements:</strong>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-              </ul>
-            </li>
-            <li class="work-position">
-                <h5><?php echo $jobs[1]['title']; ?></h5>
-                <p><?php echo $jobs[1]['description']; ?></p>
-                <strong>Achievements:</strong>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                </ul>
-              </li>
-              <li class="work-position">
-                  <h5><?php echo $jobs[2]['title']; ?></h5>
-                  <p><?php echo $jobs[2]['description']; ?></p>
-                  <strong>Achievements:</strong>
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  </ul>
-                </li>
+          <?php
+          $idx = 0;
+          do {
+            echo '<li class="work-position">';
+            echo '<h5>' .  $jobs[$idx]['title'] . '</h5>';
+            echo '<p>' . $jobs[$idx]['description'] . '</p>';
+            echo '<strong>Achievements:</strong>';
+            echo '<ul>';
+            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo'</ul>';
+            echo '</li>';
+            $idx = $idx + 1;
+          } while($idx < 3); 
+          for($idy = 0; $idy < count($jobs); $idy++) {
+        
+            echo '<li class="work-position">';
+            echo '<h5>' .  $jobs[$idy]['title'] . '</h5>';
+            echo '<p>' . $jobs[$idy]['description'] . '</p>';
+            echo '<strong>Achievements:</strong>';
+            echo '<ul>';
+            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+            echo'</ul>'; 
+            echo '</li>';
+          } 
+          ?>
+
           </ul>
         </div>
         <div>
