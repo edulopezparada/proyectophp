@@ -13,7 +13,7 @@ $jobs = [
   [  
     'title' => 'C-Founder - Tradeando Futuros',
     'description' => 'This was an online trading academy, that his core course was about trading psicology',
-    'visible' => true,
+    'visible' => false,
     'months' => 5
   ],
   [
@@ -105,7 +105,7 @@ echo 'es mayor que 2';
             if($totalMonths > $limitMonths){
             break;
             }
-            if($jobs[$idy]['visible'] != true ){
+            if(!$jobs[$idy]['visible']){
             continue;
             }
             echo '<li class="work-position">';
