@@ -182,7 +182,7 @@ echo 'es mayor que 2';
     </div>
     <div id="resume-footer" class="row">
       <div class="col">
-          Designed by @hectorbenitez
+          Designed by @edulopezp
       </div>
     </div>
   </div>

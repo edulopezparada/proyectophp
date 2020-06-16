@@ -23,7 +23,7 @@ rsort($valores);
 $idx=0;
 do {
     echo $valores[$idx]. ',';
-    $idx =$idx +1;
+    $idx++;
 }while($idx<3);
 echo "<br>********<br>";
 //Menores
@@ -31,7 +31,7 @@ sort($valores);
 $idy=0;
 do {
     echo $valores[$idy]. ',';
-    $idy =$idy +1;
+    $idy++;
 }while($idy<3)
 
 
