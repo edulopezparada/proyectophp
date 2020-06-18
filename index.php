@@ -1,53 +1,11 @@
 <?php
+
+include('jobs.php');
+
 $name = 'Edu López';
 $lastname = 'Parada';
 $completename = "$name $lastname";
-$limitMonths = 12;
-$jobs = [
-  [
-   'title' =>'SEO & Marketing Manager',
-   'description' => 'I was working in all the marketing strategy and the google rank to Silmaplast madrid',
-   'visible' => true,
-   'months' => 4
-  ],
-  [  
-    'title' => 'C-Founder - Tradeando Futuros',
-    'description' => 'This was an online trading academy, that his core course was about trading psicology',
-    'visible' => false,
-    'months' => 5
-  ],
-  [
-     'title' => 'Web Developer - Local Max',
-     'description' => 'Now I am working in Local Max, this company is specialize in Local Rank',
-     'visible' => true,
-     'months' => 2
-  ],
-  [
-    'title' => 'SEO Local Expert - Local Max',
-    'description'=> 'I am specialized in local rank, t improve the visibility of local companies',
-    'visible' => true,
-    'months' => 2
-  ],
-  [
-    'title' => 'Associate in Google',
-    'visible' => true,
-    'months' => 12
-  ]
-];
-$languages = [
-  [
-      'Java','Pascal','R','HTML','PHP'  
-  ],
-  [
-      'Español - Nativo', 'Portugués - Bilingue', 'Inglés - Profesional'   
-  ]
-];
-$var1 = 1;
-if($var1 > 2){
-echo 'es mayor que 2';
-} else {
- echo 'no es mayor que 2';
-}
+$limitMonths = 240;
 
 ?>
 <!doctype html>
@@ -101,24 +59,11 @@ echo 'es mayor que 2';
           $totalMonths=0;
           for($idy = 0; $idy < count($jobs); $idy++) {
             //$totalMonths = $totalMonths + $jobs[$idy]['months'];
-            $totalMonths += $jobs[$idy]['months'];
+            $totalMonths += $jobs[$idy]->months;
             if($totalMonths > $limitMonths){
             break;
             }
-            if(!$jobs[$idy]['visible']){
-            continue;
-            }
-            echo '<li class="work-position">';
-            echo '<h5>' .  $jobs[$idy]['title'] . '</h5>';
-            echo '<p>' . $jobs[$idy]['description'] . '</p>';
-            echo '<p>' . $jobs[$idy]['months'] . '</p>';
-            echo '<strong>Achievements:</strong>';
-            echo '<ul>';
-            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-            echo  '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-            echo'</ul>'; 
-            echo '</li>';
+            printJob($jobs[$idy]);
             
           } 
           ?>
