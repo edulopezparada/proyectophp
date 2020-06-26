@@ -63,7 +63,7 @@ $limitMonths = 240;
             if($totalMonths > $limitMonths){
             break;
             }
-            printJob($jobs[$idy]);
+            printElement($jobs[$idy]);
             
           } 
           ?>
@@ -72,6 +72,16 @@ $limitMonths = 240;
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
+            <ul>
+          <?php
+          for($idy = 0; $idy < count($projects); $idy++) {
+          
+            printElement($projects[$idy]);
+            
+          } 
+          ?>
+
+          </ul>
             <div class="project">
                 <h5>Project X</h5>
                 <div class="row">
