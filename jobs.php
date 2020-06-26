@@ -1,7 +1,10 @@
 <?php
-require 'app/Models/job.php';
-require 'app/Models/project.php';
-require_once 'app/Models/Printable.php';
+
+require_once 'vendor/autoload.php';
+
+use App\Models\{Job, Project, Printable} ;
+
+
 
 
 $job1 = new Job('SEO & Marketing Manager','I was working in all the marketing strategy and the google rank to Silmaplast madrid');
@@ -14,6 +17,8 @@ $job3 = new Job('Web Developer - Local Max','Now I am working in Local Max, this
 $job3->months = 21;
 
 $project1 = new Project('Project 1','Description 1');
+
+// $proyectLib = new Lib1\Project();
 
 $jobs = [
     $job1,
