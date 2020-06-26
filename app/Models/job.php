@@ -1,10 +1,14 @@
 <?php
 require_once 'BaseElement.php';
+require_once 'Printable.php';
 
-class Job extends BaseElement {
+
+class Job extends BaseElement implements Printable{
     public function __construct($title, $description){
          $newTitle = 'Job: ' . $title;
          $this->title = $newTitle;
+         //parent::__construct($title, $description);
+
     }
     public function getDurationAsString(){
         $years = floor ($this->months / 12);
@@ -13,5 +17,8 @@ class Job extends BaseElement {
         return "Job duration : $years years and $extraMonths months";
         }
         return "$years years";
+      }
+      public function getDescription(){
+        return $this->description;
       }
 }
